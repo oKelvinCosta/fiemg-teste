@@ -10,135 +10,415 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#">E-Learning</a>
+    <nav class="navbar navbar-expand-lg border-bottom">
+      <div class="container-lg">
+        <a class="navbar-brand" href="#">
+          <img src="imgs/logotipo-1.svg" alt="Logo" />
+        </a>
+
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center align-items-lg-start"
+          >
             <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Cursos</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cursos</a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#">Preço</a></li>
             <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Cadastrar</a></li>
-            <li class="nav-item">
-              <a class="nav-link btn btn-primary text-white" href="#">Login</a>
-            </li>
           </ul>
+
+          <div class="d-flex flex-column flex-lg-row">
+            <a class="btn btn-tertiary me-lg-2" href="#">Cadastrar</a>
+            <a class="btn btn-primary text-white" href="#">Login</a>
+          </div>
         </div>
       </div>
     </nav>
+
     <!-- Fim Header -->
 
-    <!-- Hero Section -->
-    <section class="hero text-center p-5">
-      <div class="container">
-        <h1 class="display-4">Descubra o futuro da educação</h1>
-        <p class="lead">
-          Aprenda quando e onde quiser, adaptando-se à sua agenda movimentada.
-        </p>
-        <a href="#" class="btn btn-primary">Cadastrar-se</a>
-        <a href="#" class="btn btn-outline-primary">Contato</a>
+    <!-- Hero -->
+    <section class="hero text-center p-lg-5">
+      <div class="container d-flex flex-column align-items-center">
+        <div class="d-flex">
+          <img src="imgs/icon container.svg" alt="Raio" class="me-2" />
+          <h1 class="display-4"><b>Descubra</b> o futuro da educação</h1>
+        </div>
+        <div>
+          <p class="lead">
+            Aprenda quando e onde quiser, adaptando-se à sua agenda movimentada.
+          </p>
+        </div>
+        <div>
+          <a href="#" class="btn btn-primary">Cadastrar-se</a>
+          <a href="#" class="btn btn-tertiary">Contato</a>
+        </div>
       </div>
     </section>
+    <!-- Fim Hero -->
 
     <!-- Logos -->
-    <section class="logos py-5">
+    <section class="logos">
       <div class="container text-center">
         <div class="row">
-          <div class="col"><img src="path/to/logo1.png" alt="Logo 1" /></div>
-          <div class="col"><img src="path/to/logo2.png" alt="Logo 2" /></div>
-          <div class="col"><img src="path/to/logo3.png" alt="Logo 3" /></div>
-          <!-- Add more logos as needed -->
+          <div class="col border-end">
+            <img src="imgs/Logo.svg" alt="Logo" />
+          </div>
+          <div class="col border-end">
+            <img src="imgs/Logo-1.svg" alt="Logo" />
+          </div>
+          <div class="col border-end">
+            <img src="imgs/Logo-2.svg" alt="Logo" />
+          </div>
+          <div class="col border-end">
+            <img src="imgs/Logo-3.svg" alt="Logo" />
+          </div>
+          <div class="col border-end">
+            <img src="imgs/Logo-4.svg" alt="Logo" />
+          </div>
+          <div class="col border-end">
+            <img src="imgs/Logo-5.svg" alt="Logo" />
+          </div>
+          <div class="col"><img src="imgs/Logo-6.svg" alt="Logo" /></div>
         </div>
       </div>
     </section>
+    <!-- Fim Logos -->
 
-    <!-- Features Section -->
-    <section class="features py-5 bg-light">
+    <!-- Features -->
+    <section class="features py-5">
       <div class="container">
-        <div class="row text-center">
-          <div class="col-md-4">
-            <h3>Aprendizado Flexível</h3>
-            <p>
-              Adeus a horários fixos! Com o e-learning, você tem o controle
-              total do seu tempo de estudo.
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h3>Variedade de Cursos</h3>
-            <p>
-              Explore uma vasta gama de disciplinas e desenvolvimento de
-              habilidades em todas as áreas.
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h3>Acesso Global</h3>
-            <p>
-              Conecte-se com especialistas e colegas de todo o mundo com o
-              e-learning.
-            </p>
-          </div>
+        <div class="row video-img">
+          <img src="imgs/button-video.svg">
+          <img src="imgs/video.jpg" alt="E-Learning video" />
         </div>
-      </div>
-    </section>
-
-    <!-- Courses Section -->
-    <section class="courses py-5">
-      <div class="container">
-        <h2 class="text-center mb-5">Nossos cursos</h2>
         <div class="row">
-          <!-- Repeat this block for each course -->
-          <div class="col-md-4 mb-4">
+          <h2 class="mb-3 mt-5">Por que escolher o E-Learning?</h2>
+          <p class="col-lg-9">
+            Lorem ipsum dolor sit amet consectetur. Interdum volutpat vel duis
+            amet. Aliquet sit euismod felis sapien auctor pellentesque odio.
+            Nisi egestas in risus id. In arcu libero mauris nam sagittis tempor
+            volutpat odio a. Laoreet turpis.
+          </p>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-4">
             <div class="card">
-              <img
-                src="path/to/course1.jpg"
-                class="card-img-top"
-                alt="Curso 1"
-              />
               <div class="card-body">
-                <h5 class="card-title">Desenvolvimento com ReactJS</h5>
+                <h3 class="card-title">Aprendizado Flexível</h3>
+                <p class="card-text">
+                  Adeus à rigidez dos horários fixos! Com o e-learning, você tem
+                  o controle total do seu tempo de estudo. Aprenda quando e onde
+                  quiser, adaptando-se à sua agenda movimentada.
+                </p>
+                <div>
+                  <a href="#" class="btn btn-primary d-flex"
+                    >Saiba mais
+                    <img
+                      class="ms-2 me-1"
+                      src="imgs/material-symbols_arrow-forward.svg"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Variedade de Cursos</h3>
+                <p class="card-text">
+                  Explore uma vasta gama de cursos e disciplinas, desde
+                  desenvolvimento de habilidades técnicas avançadas até temas de
+                  vanguarda nas ciências sociais. Temos algo para todos os
+                  interesses e níveis de habilidade.
+                </p>
+                <div>
+                  <a href="#" class="btn btn-primary d-flex"
+                    >Saiba mais
+                    <img
+                      class="ms-2 me-1"
+                      src="imgs/material-symbols_arrow-forward.svg"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Acesso Global</h3>
+                <p class="card-text">
+                  Conecte-se com especialistas e colegas de todo o mundo. Com o
+                  e-learning, a sala de aula transcende fronteiras, permitindo
+                  que você compartilhe experiências e insights com uma
+                  comunidade global de aprendizes.
+                </p>
+                <div>
+                  <a href="#" class="btn btn-primary d-flex"
+                    >Saiba mais
+                    <img
+                      class="ms-2 me-1"
+                      src="imgs/material-symbols_arrow-forward.svg"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Fim Features -->
+
+    <!-- Cursos -->
+    <section class="cursos py-5 bg-cinza">
+      <div class="container">
+        <h2 class="mb-3">Nossos cursos</h2>
+        <p class="col-lg-9">
+          Lorem ipsum dolor sit amet consectetur. Interdum volutpat vel duis
+          amet. Aliquet sit euismod felis sapien auctor pellentesque odio. Nisi
+          egestas in risus id. In arcu libero mauris nam sagittis tempor
+          volutpat odio a. Laoreet turpis.
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <img
+                  src="imgs/react.jpg"
+                  class="card-img-top img-fit"
+                  alt="Desenvolvimento com ReactJS"
+                />
+                <div
+                  class="detalhes d-flex justify-content-between align-items-center"
+                >
+                  <span class="horas">36 horas</span>
+                  <p>Professor: John Doe</p>
+                </div>
+                <h3 class="card-title">Desenvolvimento com ReactJS</h3>
                 <p class="card-text">
                   Aprofunde seus conhecimentos em desenvolvimento web com
-                  ReactJS.
+                  ReactJS, uma das bibliotecas JavaScript mais populares e
+                  poderosas do mercado.
                 </p>
-                <a href="#" class="btn btn-primary">Começar</a>
+                <div class="d-flex justify-content-end">
+                  <a href="#" class="btn btn-secondary mx-3">Salvar</a>
+                  <a href="#" class="btn btn-primary">Começar</a>
+                </div>
               </div>
             </div>
           </div>
-          <!-- More course blocks... -->
+
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <img
+                  src="imgs/iaPython.jpg"
+                  class="card-img-top img-fit"
+                  alt="Introdução à IA com Python"
+                />
+                <div
+                  class="detalhes d-flex justify-content-between align-items-center"
+                >
+                  <span class="horas">30 horas</span>
+                  <p>Professor: John Doe</p>
+                </div>
+                <h3 class="card-title">Introdução à IA com Python</h3>
+                <p class="card-text">
+                  Entre no emocionante mundo da Inteligência Artificial (IA) com
+                  este curso introdutório. Explore os fundamentos da IA e
+                  aprenda a criar algoritmos de aprendizado de máquina
+                  utilizando Python.
+                </p>
+                <div class="d-flex justify-content-end">
+                  <a href="#" class="btn btn-secondary mx-3">Salvar</a>
+                  <a href="#" class="btn btn-primary">Começar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <img
+                  src="imgs/seguranca.jpg"
+                  class="card-img-top img-fit"
+                  alt="Desenvolvimento com ReactJS"
+                />
+                <div
+                  class="detalhes d-flex justify-content-between align-items-center"
+                >
+                  <span class="horas">36 horas</span>
+                  <p>Professor: John Doe</p>
+                </div>
+                <h3 class="card-title">Desenvolvimento com ReactJS</h3>
+                <p class="card-text">
+                  Proteja-se contra ameaças cibernéticas e aprenda a defender
+                  sistemas e redes contra ataques maliciosos. Este curso abrange
+                  os princípios essenciais da segurança cibernética.
+                </p>
+                <div class="d-flex justify-content-end">
+                  <a href="#" class="btn btn-secondary mx-3">Salvar</a>
+                  <a href="#" class="btn btn-primary">Começar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <img
+                  src="imgs/aplicativos.jpg"
+                  class="card-img-top img-fit"
+                  alt="Desenvolvimento de Aplicativos Móveis com Flutter"
+                />
+                <div
+                  class="detalhes d-flex justify-content-between align-items-center"
+                >
+                  <span class="horas">36 horas</span>
+                  <p>Professor: John Doe</p>
+                </div>
+                <h3 class="card-title">
+                  Desenvolvimento de Aplicativos Móveis com Flutter
+                </h3>
+                <p class="card-text">
+                  Explore o mundo da criação de aplicativos móveis
+                  multiplataforma com Flutter, o framework de desenvolvimento
+                  móvel do Google. Este curso abrangente ensina desde os
+                  conceitos básicos.
+                </p>
+                <div class="d-flex justify-content-end">
+                  <a href="#" class="btn btn-secondary mx-3">Salvar</a>
+                  <a href="#" class="btn btn-primary">Começar</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    <!-- Fim Cursos -->
 
-    <!-- Pricing Section -->
-    <section class="pricing py-5 bg-light">
+    <!-- Preço -->
+    <section class="preco py-5">
       <div class="container">
-        <h2 class="text-center mb-5">Preços</h2>
+        <h2 class="mb-3">Preços</h2>
+        <p class="col-lg-9">
+          Lorem ipsum dolor sit amet consectetur. Interdum volutpat vel duis
+          amet. Aliquet sit euismod felis sapien auctor pellentesque odio. Nisi
+          egestas in risus id. In arcu libero mauris nam sagittis tempor
+          volutpat odio a. Laoreet turpis.
+        </p>
         <div class="row">
-          <!-- Repeat this block for each pricing plan -->
-          <div class="col-md-3 mb-4">
-            <div class="card h-100">
+          <!-- Bloco de preço -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
               <div class="card-body text-center">
                 <h5 class="card-title">GRÁTIS</h5>
-                <p class="card-text">Acesso aos cursos gratuitos.</p>
-                <p class="price">R$0/mês</p>
-                <a href="#" class="btn btn-outline-primary">Comprar</a>
+                <p class="valor"><b>R$0</b>/mês</p>
+                <ul class="list-group">
+                  <li class="list-group-item border p-2">
+                    <img class="me-3" src="imgs/icon.svg" />Acesso aos cursos
+                    gratuitos.
+                  </li>
+                  <li class="list-group-item border p-2">
+                    <img class="me-3" src="imgs/icon.svg" />Cursos novos
+                    mensalmente
+                  </li>
+                  <li class="list-group-item border p-2">
+                    <img class="me-3" src="imgs/icon.svg" />Acesso em até dois
+                    dispositivos
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  class="btn mt-4 btn-primary d-flex justify-content-center"
+                  >Comprar</a
+                >
               </div>
             </div>
           </div>
-          <!-- More pricing blocks... -->
+          <!-- Bloco de preço -->
+
+          <!-- Bloco de preço -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title">PRO</h5>
+                <p class="valor"><b>R$49</b>/mês</p>
+                <ul class="list-group">
+                  <li class="list-group-item border p-2">
+                    <img class="me-3" src="imgs/icon.svg" />Todos recursos do
+                    plano gratuito
+                  </li>
+                  <li class="list-group-item border p-2">
+                    <img class="me-3" src="imgs/icon.svg" />Feedback individual
+                    com professor
+                  </li>
+                  <li class="list-group-item border p-2">
+                    <img class="me-3" src="imgs/icon.svg" />Acesso em até quatro
+                    dispositivos
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  class="btn mt-4 btn-primary d-flex justify-content-center"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Bloco de preço -->
+
+          <!-- Bloco de preço -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title">ENTERPRISE</h5>
+                <p class="valor"><b>R$99</b>/mês</p>
+                <ul class="list-group">
+                  <li class="list-group-item border p-2">
+                    <img class="me-3" src="imgs/icon.svg" />Todos recursos do
+                    plano Pro
+                  </li>
+                  <li class="list-group-item border p-2">
+                    <img class="me-3" src="imgs/icon.svg" />Download das
+                    videoaulas
+                  </li>
+                  <li class="list-group-item border p-2">
+                    <img class="me-3" src="imgs/icon.svg" />Acesso em até seis
+                    dispositivos
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  class="btn mt-4 btn-primary d-flex justify-content-center"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Bloco de preço -->
         </div>
       </div>
     </section>
@@ -146,41 +426,131 @@
     <!-- FAQ Section -->
     <section class="faq py-5">
       <div class="container">
-        <h2 class="text-center mb-5">Perguntas Frequentes</h2>
-        <div class="accordion" id="faqAccordion">
-          <!-- Repeat this block for each FAQ item -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
+        <h2 class="text-end mb-3">
+          Perguntas <br />
+          Frequentes
+        </h2>
+        <div class="row">
+          <div class="accordion .accordion-flush col-lg-6" id="faqAccordion">
+            <!-- Item faq -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  Quais são os requisitos para participar dos cursos de
+                  e-learning?
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
               >
-                Quais são os requisitos para participar dos cursos de
-                e-learning?
-              </button>
-            </h2>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse show"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                </div>
               </div>
             </div>
+            <!-- Item faq -->
+
+            <!-- Item faq -->
+            <div class="accordion-item mt-3">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                >
+                  Como funcionam as aulas e os materiais de estudo?
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                </div>
+              </div>
+            </div>
+            <!-- Item faq -->
+
+            <!-- Item faq -->
+            <div class="accordion-item mt-3">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                >
+                  Os cursos oferecem certificados de conclusão?
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                </div>
+              </div>
+            </div>
+            <!-- Item faq -->
+
+            <!-- Item faq -->
+            <div class="accordion-item mt-3">
+              <h2 class="accordion-header" id="headingFour">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                >
+                  Existe suporte disponível durante o curso?
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                </div>
+              </div>
+            </div>
+            <!-- Item faq -->
           </div>
-          <!-- More FAQ blocks... -->
+          <div class="col-lg-6">
+            <p class="text-end">
+              Lorem ipsum dolor sit amet consectetur. Interdum volutpat vel duis
+              amet. Aliquet sit euismod felis sapien auctor pellentesque odio.
+              Nisi egestas in risus id. In arcu libero mauris nam sagittis
+              tempor volutpat odio a. Laoreet turpis.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center py-4 bg-dark text-white">
-      <p>&copy; 2024. Todas as direitas reservadas.</p>
+    <footer class="text-center text-white">
+      <img src="imgs/logotipo.svg" alt="Logo Escola" class="mb-2" />
+      <p class="text-white">&copy; 2024. Todas as direitos reservadas.</p>
     </footer>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
