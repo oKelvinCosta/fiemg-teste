@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FIEMG Teste</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">E-Learning</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Cursos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Preço</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Cadastrar</a></li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-primary text-white" href="#">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Fim Header -->
+
+    <!-- Hero Section -->
+    <section class="hero text-center p-5">
+      <div class="container">
+        <h1 class="display-4">Descubra o futuro da educação</h1>
+        <p class="lead">
+          Aprenda quando e onde quiser, adaptando-se à sua agenda movimentada.
+        </p>
+        <a href="#" class="btn btn-primary">Cadastrar-se</a>
+        <a href="#" class="btn btn-outline-primary">Contato</a>
+      </div>
+    </section>
+
+    <!-- Logos -->
+    <section class="logos py-5">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col"><img src="path/to/logo1.png" alt="Logo 1" /></div>
+          <div class="col"><img src="path/to/logo2.png" alt="Logo 2" /></div>
+          <div class="col"><img src="path/to/logo3.png" alt="Logo 3" /></div>
+          <!-- Add more logos as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features py-5 bg-light">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <h3>Aprendizado Flexível</h3>
+            <p>
+              Adeus a horários fixos! Com o e-learning, você tem o controle
+              total do seu tempo de estudo.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h3>Variedade de Cursos</h3>
+            <p>
+              Explore uma vasta gama de disciplinas e desenvolvimento de
+              habilidades em todas as áreas.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h3>Acesso Global</h3>
+            <p>
+              Conecte-se com especialistas e colegas de todo o mundo com o
+              e-learning.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Nossos cursos</h2>
+        <div class="row">
+          <!-- Repeat this block for each course -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="path/to/course1.jpg"
+                class="card-img-top"
+                alt="Curso 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Desenvolvimento com ReactJS</h5>
+                <p class="card-text">
+                  Aprofunde seus conhecimentos em desenvolvimento web com
+                  ReactJS.
+                </p>
+                <a href="#" class="btn btn-primary">Começar</a>
+              </div>
+            </div>
+          </div>
+          <!-- More course blocks... -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Preços</h2>
+        <div class="row">
+          <!-- Repeat this block for each pricing plan -->
+          <div class="col-md-3 mb-4">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <h5 class="card-title">GRÁTIS</h5>
+                <p class="card-text">Acesso aos cursos gratuitos.</p>
+                <p class="price">R$0/mês</p>
+                <a href="#" class="btn btn-outline-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+          <!-- More pricing blocks... -->
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Perguntas Frequentes</h2>
+        <div class="accordion" id="faqAccordion">
+          <!-- Repeat this block for each FAQ item -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+              >
+                Quais são os requisitos para participar dos cursos de
+                e-learning?
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              </div>
+            </div>
+          </div>
+          <!-- More FAQ blocks... -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark text-white">
+      <p>&copy; 2024. Todas as direitas reservadas.</p>
+    </footer>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
