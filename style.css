@@ -3,13 +3,44 @@
 /* Importação de fonte */
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+/* Fonte local weight 500, pois no google fonts não há essa variação */
+@font-face {
+  font-family: latoMedium;
+  src: url(font/Lato-Medium.ttf);
+}
+
+/* Variáveis */
+:root {
+  --purple-1: #4a3aff;
+  --purple-2: #3529b5;
+  --purple-3: #e7e1ff;
+  --gray-1: #f9f9f9;
+  --gray-2: #767676;
+  --gray-3: #5c5c5c;
+  --gray-4: #333333;
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-padding-y: 0.55rem;
+  --bs-nav-link-font-weight: 500;
+}
+
 /* Definindo a fonte padrão */
 * {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: "Lato", serif;
+  font-weight: 500;
   font-style: normal;
 }
 
+/* Container dos elementos no Desktop */
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1120px;
+  }
+}
 /* =============== Tipografia ===============*/
 
 .lato-thin {
@@ -30,6 +61,12 @@
   font-style: normal;
 }
 
+.lato-medium {
+  font-family: latoMedium, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .lato-bold,
 h1,
 h2,
@@ -37,6 +74,7 @@ h3 {
   font-family: "Lato", sans-serif !important;
   font-weight: 700 !important;
   font-style: normal;
+  color: var(--gray-4);
 }
 
 .lato-black {
@@ -77,10 +115,10 @@ h3 {
 
 p {
   line-height: 26px;
-  color: #5c5c5c;
+  color: var(--gray-3);
 }
 .bg-cinza {
-  background-color: #f9f9f9;
+  background-color: var(--gray-1);
 }
 
 /* =============== Botões ===============*/
@@ -89,20 +127,24 @@ p {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-style: normal;
+  --bs-btn-padding-x: 1rem !important;
+  --bs-btn-padding-y: 0.55rem !important;
+  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
 }
 .btn-primary {
-  background-color: #4a3aff;
+  background-color: var(--purple-1);
+  border: none;
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:focus-visible,
 .btn-primary:active {
-  background-color: #3529b5 !important;
+  background-color: var(--purple-2) !important;
 }
 
 .btn-secondary {
-  color: #5c5c5c;
-  background-color: #f9f9f9;
+  color: var(--gray-3);
+  background-color: var(--gray-1);
   border: none;
 }
 .btn-secondary:hover,
@@ -110,35 +152,44 @@ p {
 .btn-secondary:focus-visible,
 .btn-secondary:active {
   background-color: #e4e4e4 !important;
-  color: #5c5c5c !important;
+  color: var(--gray-3) !important;
 }
 .btn-tertiary {
   background-color: none;
   border: none;
+  color: var(--gray-3) !important;
 }
 .btn-tertiary:hover,
 .btn-tertiary:focus,
 .btn-tertiary:focus-visible,
 .btn-tertiary:active {
-  background-color: #f9f9f9 !important;
+  background-color: var(--purple-3) !important;
   border: none;
 }
+
+.navbar .nav-link {
+  color: var(--gray-4);
+  font-family: latoMedium, sans-serif !important;
+}
+
 /* =============== Hero ===============*/
 
 h1 b {
-  color: #4a3aff;
+  color: var(--purple-1);
 }
+
 .hero h1 {
   margin: 0;
+  font-size: 3em;
 }
 .hero p {
   font-size: 24px;
-  color: #333333;
+  color: var(--gray-4);
   margin-bottom: 35px;
   max-width: 700px;
 }
 /* =============== Logos ===============*/
-.logos{
+.logos {
   padding: 0 !important;
 }
 .logos .row div {
@@ -149,12 +200,12 @@ h1 b {
 }
 
 /* =============== Features ===============*/
-.features .video-img{
+.features .video-img {
   position: relative;
   max-width: 925px;
   margin: auto;
 }
-.features .video-img img:first-child{
+.features .video-img img:first-child {
   position: absolute;
   width: 80px;
   position: absolute;
@@ -164,11 +215,10 @@ h1 b {
   left: 50%;
   padding: 0;
 }
-.features .video-img img:last-child{
-border-radius: 4px;
-padding: 0;
+.features .video-img img:last-child {
+  border-radius: 4px;
+  padding: 0;
 }
-
 
 .features .card {
   background-color: #edebff;
@@ -176,23 +226,19 @@ padding: 0;
   border: none;
 }
 .features .card-body {
-  padding-top: 60px;
-  padding-bottom: 65px;
+  padding-top: 45px;
+  padding-bottom: 50px;
 
   text-align: start;
 }
-.features .card-text {
-  min-height: 130px;
-}
 
 .features h3 {
-  color: #4a3aff;
+  color: var(--purple-1);
 }
 
 .features .card-body div {
   display: flex;
   flex-direction: row-reverse;
-  margin-top: 30px;
 }
 
 /* =============== Cursos ===============*/
@@ -203,7 +249,6 @@ padding: 0;
 .cursos .card {
   border: none;
   border-radius: 12px;
-  margin-bottom: 30px;
 }
 .cursos img {
   border-radius: 8px;
@@ -219,7 +264,7 @@ padding: 0;
 }
 .horas {
   border-radius: 4px;
-  color: #333333;
+  color: var(--gray-4);
   font-size: 14px;
   border: 1px solid #ededed;
   width: Hug (70px) px;
@@ -237,63 +282,207 @@ padding: 0;
 }
 
 /* =============== Preço ===============*/
-.preco .card{
+.preco .card {
   border: none;
-  background-color: #F9F9F9;
- 
+  background-color: var(--gray-1);
 }
-.preco .card-body{
-  padding: 40px 25px;
+.preco .card-body {
+  padding: 40px 20px;
 }
-.preco .card-title{
+.preco .card-title {
   padding: 12px 24px;
-    border-radius: 4px;
-    border: 1px solid #E1BBF7;
-    background: #F5E9FC;
-    color: #420F60;
-    font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #e1bbf7;
+  background: #f5e9fc;
+  color: #420f60;
+  font-size: 16px;
 }
 .preco b {
   font-size: 32px;
-    color: #333333;
+  color: var(--gray-4);
 }
-.preco .valor{
+.preco .valor {
   margin-top: 30px;
   margin-bottom: 15px;
+  color: var(--gray-4);
 }
 .preco li {
   margin-top: 10px;
   border-radius: 4px !important;
   text-align: left;
   background-color: unset;
+  color: var(--gray-3);
 }
 
-/* =============== Perguntas Frequentes ===============*/
+/* =============== FAQ Perguntas Frequentes ===============*/
 
-
-.faq .accordion-button, .faq .accordion-button:focus, .faq .accordion-button:active, .faq .accordion-button:focus-visible{
-
-  background-color: #F9F9F9;
+.faq .accordion-button,
+.faq .accordion-button:focus,
+.faq .accordion-button:active,
+.faq .accordion-button:focus-visible {
+  background-color: var(--gray-1);
   border-radius: 6px !important;
   border: 0px solid white;
-
+  box-shadow: 0px 0px;
 }
 
-.faq .accordion, .faq .accordion div, .faq .accordion *{
+.faq .accordion,
+.faq .accordion div,
+.faq .accordion * {
   border-radius: 6px !important;
   border: 0px solid white;
   box-shadow: 0px white;
+}
+
+.accordion-button::after {
+  transform: rotate(-180deg);
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(0deg);
 }
 
 /* =============== Footer ===============*/
 
 footer {
   background-color: #1f186b;
-  padding-top: 65px !important;
-  padding-bottom: 65px !important;
+  padding-top: 35px;
+  padding-bottom: 10px;
 }
 
-/* =============== Para funcionar apenas em tamanhos Dektop =============== */
+/* =============== Modal ===============*/
+
+.modal {
+  --bs-modal-width: 640px;
+}
+#cadastroModal .btn-close {
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 4px;
+  align-self: flex-end;
+}
+#cadastroModal h1 {
+  font-size: 24px !important;
+}
+.modal-header {
+  border: none;
+}
+#cadastroModal form {
+  padding: 30px 90px 100px 90px;
+}
+#cadastroModal form label {
+  color: var(--gray-3);
+}
+
+#cadastroModal p,
+#cadastroModal a {
+  color: var(--gray-3);
+}
+#cadastroModal .form-control:focus {
+  border-color: #c7c2ff;
+  outline: 0;
+  box-shadow: 0px 0px 0px 4px #6e61ff40;
+}
+
+#cadastroModal #togglePassword {
+  color: var(--gray-2) !important;
+  width: 30px;
+  height: 1em;
+  display: flex;
+  position: absolute;
+  right: 0em;
+  bottom: 0.6em;
+  cursor: pointer;
+  font-size: 1em !important;
+}
+
+::placeholder {
+  color: var(--gray-2) !important;
+  opacity: 1; /* Firefox */
+}
+
+
+
+/* =============== Para funcionar apenas em tamanhos menores que 768px =============== */
+@media only screen and (max-width: 768px) {
+  #cadastroModal form {
+    padding: 2em;
+  }
+  .modal {
+    --bs-modal-width: 85%;
+  }
+}
+
+/* =============== Para funcionar apenas em tamanhos menores que 576px =============== */
+@media only screen and (max-width: 576px) {
+  .hero h1 {
+    font-size: 8vw;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+
+  .logos .row div {
+    height: 60px;
+  }
+
+  .logos img {
+    width: 60px;
+  }
+  .features .card-body {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .preco .card-body {
+    padding: 24px 16px;
+  }
+
+  #cadastroModal form {
+    padding: 0;
+  }
+}
+
+
+
+
+/* =============== Para funcionar apenas em tamanhos menores de 992px =============== */
+@media only screen and (max-width: 992px) {
+  .navbar-brand {
+    padding: 0;
+  }
+  .navbar-brand img {
+    max-width: 60px;
+  }
+  .navbar-toggler {
+    padding: 5px;
+  }
+
+  .hero img {
+    width: 8vw;
+    align-self: flex-start;
+    display: inline-block;
+  }
+
+  .hero p {
+    padding: 0 10px;
+  }
+
+  /* Cursos */
+  .cursos .img-fit {
+    max-height: 200px;
+    height: 100vh;
+  }
+  .cursos .card-text {
+    min-height: 140px !important;
+  }
+
+  .logos .row div:nth-child(3).border-end {
+    border-right: none !important;
+  }
+}
+
+/* =============== Para funcionar apenas em tamanhos Dektop, acima de 992px =============== */
 @media only screen and (min-width: 992px) {
   h2 {
     font-size: 32px;
@@ -317,11 +506,52 @@ footer {
     padding-top: 75px !important;
     padding-bottom: 50px !important;
   }
+  .features .card-text {
+    min-height: 160px;
+  }
+  /* Cursos */
+  .cursos .img-fit {
+    height: 250px;
+  }
   .faq {
+    margin-top: -20px;
+    padding-top: 0 !important;
     padding-bottom: 222px !important;
   }
   footer {
     padding-top: 65px !important;
     padding-bottom: 40px !important;
+  }
+}
+
+/* =============== Para funcionar apenas no intervalo de 600px a 992px =============== */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .hero img {
+    width: 6vw;
+    align-self: flex-start;
+    display: inline-block;
+  }
+  .hero h1 {
+    font-size: 2.6em;
+  }
+
+}
+
+/* =============== Para funcionar apenas no intervalo de 768px a 1200px =============== */
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .features .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .preco .card,
+  .features .card {
+    height: 100%;
+  }
+  .preco .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
