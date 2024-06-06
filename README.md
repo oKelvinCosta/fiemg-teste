@@ -1,4 +1,9 @@
-# Teste FIEMG utilizando HTML, CSS, Javascript e Bootstrap
+# Teste para FIEMG, utilizando HTML, CSS, Javascript e Bootstrap
+
+## Abra o site
+```bash
+https://okelvincosta.github.io/fiemg-teste/
+```
 
 ## Design das Telas
 ```bash
