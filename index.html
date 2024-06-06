@@ -54,12 +54,16 @@
             <ul
               class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center align-items-lg-start"
             >
-              <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Cursos</a>
+                <a class="nav-link" href="#sobre">Sobre</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#">Preço</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#cursos">Cursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#preco">Preço</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
             </ul>
 
             <div class="d-flex flex-column flex-lg-row">
@@ -84,8 +88,11 @@
     <section class="hero text-center py-5 p-lg-5">
       <div class="container d-flex flex-column align-items-center">
         <div class="d-flex">
-          <img src="imgs/icon container.svg" alt="Raio" class="me-2 me-sm-3" />
-          <h1 class="text-start"><b>Descubra</b> <br class="d-md-none d-lg-none">o futuro da educação</h1>
+          <img src="imgs/iconContainer.svg" alt="Raio" class="me-2 me-sm-3" />
+          <h1 class="text-start">
+            <b>Descubra</b> <br class="d-md-none d-lg-none" />o futuro da
+            educação
+          </h1>
         </div>
         <div class="mt-4">
           <p>
@@ -130,18 +137,44 @@
           <div class="col-3 col-lg border-end">
             <img src="imgs/Logo-5.svg" alt="Logo" />
           </div>
-          <div class="col-3 col-lg"><img src="imgs/Logo-6.svg" alt="Logo" /></div>
+          <div class="col-3 col-lg">
+            <img src="imgs/Logo-6.svg" alt="Logo" />
+          </div>
         </div>
       </div>
     </section>
     <!-- Fim Logos -->
 
-    <!-- Features -->
-    <section class="features py-4 py-md-5">
+    <!-- Sobre/Features -->
+    <section id="sobre" class="features py-4 py-md-5">
       <div class="container">
         <div class="row video-img">
-          <img src="imgs/button-video.svg" />
-          <img src="imgs/video.jpg" alt="E-Learning video" />
+          <img
+            id="playBtn"
+            src="imgs/button-video.svg"
+            alt="Botão Play Video"
+          />
+          <img id="imgVideo" src="imgs/video.jpg" alt="E-Learning video" />
+          <div
+            id="vimeo"
+            class="d-none"
+            style="padding: 56.25% 0 0 0; position: relative"
+          >
+            <iframe
+              id="sobreVideo"
+              src="https://player.vimeo.com/video/569017173?h=cb7af5dda7&title=0&byline=0&portrait=0"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
         <div class="row">
           <h2 class="mb-3 mt-5">Por que escolher o E-Learning?</h2>
@@ -232,7 +265,7 @@
     <!-- Fim Features -->
 
     <!-- Cursos -->
-    <section class="cursos py-4 py-md-5 bg-cinza">
+    <section id="cursos" class="cursos py-4 py-md-5 bg-cinza">
       <div class="container">
         <h2 class="mb-3">Nossos cursos</h2>
         <p class="col-lg-9 mb-4">
@@ -393,7 +426,7 @@
     <!-- Fim Cursos -->
 
     <!-- Preço -->
-    <section class="preco py-4 py-md-5">
+    <section id="preco" class="preco py-4 py-md-5">
       <div class="container">
         <h2 class="mb-3">Preços</h2>
         <p class="col-lg-9 mb-4">
@@ -500,7 +533,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="faq mb-5 mb-lg-0">
+    <section id="faq" class="faq mb-5 mb-lg-0">
       <div class="container">
         <h2 class="text-lg-end mb-3">
           Perguntas <br />
@@ -515,7 +548,10 @@
               tempor volutpat odio a. Laoreet turpis.
             </p>
           </div>
-          <div class="accordion col-lg-6 mt-4 mt-lg-0 order-lg-1" id="faqAccordion">
+          <div
+            class="accordion col-lg-6 mt-4 mt-lg-0 order-lg-1"
+            id="faqAccordion"
+          >
             <!-- Item faq -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
@@ -648,21 +684,11 @@
             <form>
               <div class="mb-3">
                 <label for="InputName" class="form-label">Nome</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="InputName"
-                  aria-describedby="nameHelp"
-                />
+                <input type="text" class="form-control" id="InputName" />
               </div>
               <div class="mb-3">
                 <label for="InputEmail" class="form-label">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="InputEmail"
-                  aria-describedby="emailHelp"
-                />
+                <input type="email" class="form-control" id="InputEmail" />
               </div>
               <div class="mb-3 position-relative">
                 <label for="InputPassword" class="form-label">Senha</label>
@@ -696,6 +722,9 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Api de manuseio de videos do Vimeo -->
+    <script src="https://player.vimeo.com/api/player.js"></script>
 
     <!-- Meu Javascript -->
     <script src="javascript.js"></script>

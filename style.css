@@ -9,7 +9,7 @@
   src: url(font/Lato-Medium.ttf);
 }
 
-/* Variáveis */
+/* Variáveis Globais */
 :root {
   --purple-1: #4a3aff;
   --purple-2: #3529b5;
@@ -18,9 +18,15 @@
   --gray-2: #767676;
   --gray-3: #5c5c5c;
   --gray-4: #333333;
+  --gray-5: #e4e4e4;
   --bs-btn-padding-x: 1rem;
   --bs-btn-padding-y: 0.55rem;
   --bs-nav-link-font-weight: 500;
+}
+
+/* Cor */
+.bg-cinza {
+  background-color: var(--gray-1);
 }
 
 /* Definindo a fonte padrão */
@@ -41,6 +47,7 @@
     max-width: 1120px;
   }
 }
+
 /* =============== Tipografia ===============*/
 
 .lato-thin {
@@ -74,7 +81,7 @@ h3 {
   font-family: "Lato", sans-serif !important;
   font-weight: 700 !important;
   font-style: normal;
-  color: var(--gray-4);
+  color: var(--gray-4) !important;
 }
 
 .lato-black {
@@ -117,9 +124,6 @@ p {
   line-height: 26px;
   color: var(--gray-3);
 }
-.bg-cinza {
-  background-color: var(--gray-1);
-}
 
 /* =============== Botões ===============*/
 .btn {
@@ -131,45 +135,65 @@ p {
   --bs-btn-padding-y: 0.55rem !important;
   padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
 }
+
+/* Btn primario */
 .btn-primary {
   background-color: var(--purple-1);
   border: none;
 }
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:focus-visible,
-.btn-primary:active {
+.btn-primary:hover {
   background-color: var(--purple-2) !important;
 }
+.btn-primary.btn:focus-visible {
+  background-color: var(--purple-2);
+  border-color: var(--purple-2);
+  box-shadow: 0 0 0 0.25rem #6e61ff40;
+}
 
+/* Btn secundário */
 .btn-secondary {
   color: var(--gray-3);
   background-color: var(--gray-1);
   border: none;
 }
-.btn-secondary:hover,
-.btn-secondary:focus,
-.btn-secondary:focus-visible,
-.btn-secondary:active {
-  background-color: #e4e4e4 !important;
+.btn-secondary:hover {
+  background-color: var(--gray-5) !important;
   color: var(--gray-3) !important;
 }
+.btn-secondary.btn:focus-visible {
+  background-color: var(--gray-5) !important;
+}
+
+/* Btn terciário */
 .btn-tertiary {
-  background-color: none;
   border: none;
   color: var(--gray-3) !important;
 }
-.btn-tertiary:hover,
-.btn-tertiary:focus,
-.btn-tertiary:focus-visible,
-.btn-tertiary:active {
+.btn-tertiary:hover {
   background-color: var(--purple-3) !important;
   border: none;
+}
+.btn-tertiary.btn:focus {
+  color: var(--gray-3) !important;
+}
+a.btn-tertiary.btn:focus-visible {
+  background-color: var(--purple-3) !important;
+  color: var(--gray-3) !important;
+}
+
+/* =============== Header ===============*/
+
+.nav-link:focus-visible {
+  box-shadow: 0 0 0 0.25rem #6e61ff40;
 }
 
 .navbar .nav-link {
   color: var(--gray-4);
   font-family: latoMedium, sans-serif !important;
+}
+
+.navbar .nav-link:hover {
+  color: var(--purple-1);
 }
 
 /* =============== Hero ===============*/
@@ -188,6 +212,7 @@ h1 b {
   margin-bottom: 35px;
   max-width: 700px;
 }
+
 /* =============== Logos ===============*/
 .logos {
   padding: 0 !important;
@@ -214,8 +239,19 @@ h1 b {
   top: 50%;
   left: 50%;
   padding: 0;
+  cursor: pointer;
+  filter: brightness(1);
 }
-.features .video-img img:last-child {
+.features .video-img img:first-child:hover {
+  filter: brightness(0.8);
+}
+.features .video-img img:nth-last-child(2) {
+  max-height: 490px;
+  object-fit: cover;
+}
+
+.features .video-img img:nth-last-child(2),
+.features iframe {
   border-radius: 4px;
   padding: 0;
 }
@@ -267,8 +303,6 @@ h1 b {
   color: var(--gray-4);
   font-size: 14px;
   border: 1px solid #ededed;
-  width: Hug (70px) px;
-  height: Hug (29px) px;
   padding: 4px 8px;
 
   border: 1px 0px 0px 0px;
@@ -322,8 +356,17 @@ h1 b {
 .faq .accordion-button:focus-visible {
   background-color: var(--gray-1);
   border-radius: 6px !important;
-  border: 0px solid white;
+  border: 0px;
   box-shadow: 0px 0px;
+}
+.faq .accordion-button:hover {
+  background-color: var(--purple-3);
+}
+
+.faq .accordion-button:focus,
+.faq .accordion-button:active,
+.faq .accordion-button:focus-visible {
+  background-color: var(--purple-3);
 }
 
 .faq .accordion,
@@ -401,53 +444,9 @@ footer {
   opacity: 1; /* Firefox */
 }
 
-
-
-/* =============== Para funcionar apenas em tamanhos menores que 768px =============== */
-@media only screen and (max-width: 768px) {
-  #cadastroModal form {
-    padding: 2em;
-  }
-  .modal {
-    --bs-modal-width: 85%;
-  }
-}
-
-/* =============== Para funcionar apenas em tamanhos menores que 576px =============== */
-@media only screen and (max-width: 576px) {
-  .hero h1 {
-    font-size: 8vw;
-  }
-  .hero p {
-    font-size: 18px;
-  }
-
-  .logos .row div {
-    height: 60px;
-  }
-
-  .logos img {
-    width: 60px;
-  }
-  .features .card-body {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-
-  .preco .card-body {
-    padding: 24px 16px;
-  }
-
-  #cadastroModal form {
-    padding: 0;
-  }
-}
-
-
-
-
 /* =============== Para funcionar apenas em tamanhos menores de 992px =============== */
 @media only screen and (max-width: 992px) {
+  /* Header  */
   .navbar-brand {
     padding: 0;
   }
@@ -458,6 +457,7 @@ footer {
     padding: 5px;
   }
 
+  /* Hero  */
   .hero img {
     width: 8vw;
     align-self: flex-start;
@@ -468,6 +468,11 @@ footer {
     padding: 0 10px;
   }
 
+  /* Logos  */
+  .logos .row div:nth-child(3).border-end {
+    border-right: none !important;
+  }
+
   /* Cursos */
   .cursos .img-fit {
     max-height: 200px;
@@ -476,20 +481,66 @@ footer {
   .cursos .card-text {
     min-height: 140px !important;
   }
+}
 
-  .logos .row div:nth-child(3).border-end {
-    border-right: none !important;
+/* =============== Para funcionar apenas em tamanhos menores que 768px =============== */
+@media only screen and (max-width: 768px) {
+  /* Modal  */
+  #cadastroModal form {
+    padding: 2em;
+  }
+  .modal {
+    --bs-modal-width: 85%;
+  }
+}
+
+/* =============== Para funcionar apenas em tamanhos menores que 576px =============== */
+@media only screen and (max-width: 576px) {
+  /* Hero  */
+  .hero h1 {
+    font-size: 8vw;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+
+  /* Logos  */
+  .logos .row div {
+    height: 60px;
+  }
+
+  .logos img {
+    width: 60px;
+  }
+
+  /* Features  */
+  .features .card-body {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  /* Preço  */
+  .preco .card-body {
+    padding: 24px 16px;
+  }
+
+  /* Modal  */
+  #cadastroModal form {
+    padding: 0;
   }
 }
 
 /* =============== Para funcionar apenas em tamanhos Dektop, acima de 992px =============== */
 @media only screen and (min-width: 992px) {
+  /* Tipografia  */
   h2 {
     font-size: 32px;
   }
   h3 {
     font-size: 24px;
   }
+
+  /* Header  */
   .navbar {
     height: 100px;
   }
@@ -497,11 +548,13 @@ footer {
     padding-top: 60px !important;
   }
 
+  /* Hero  */
   .hero {
     padding-top: 135px !important;
     padding-bottom: 75px !important;
   }
 
+  /* Features  */
   .features {
     padding-top: 75px !important;
     padding-bottom: 50px !important;
@@ -513,11 +566,13 @@ footer {
   .cursos .img-fit {
     height: 250px;
   }
+  /* Faq */
   .faq {
-    margin-top: -20px;
-    padding-top: 0 !important;
+    padding-top: 0px !important;
     padding-bottom: 222px !important;
   }
+
+  /* Footer  */
   footer {
     padding-top: 65px !important;
     padding-bottom: 40px !important;
@@ -526,6 +581,7 @@ footer {
 
 /* =============== Para funcionar apenas no intervalo de 600px a 992px =============== */
 @media only screen and (min-width: 600px) and (max-width: 992px) {
+  /* Hero  */
   .hero img {
     width: 6vw;
     align-self: flex-start;
@@ -534,11 +590,11 @@ footer {
   .hero h1 {
     font-size: 2.6em;
   }
-
 }
 
 /* =============== Para funcionar apenas no intervalo de 768px a 1200px =============== */
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
+  /* Features  */
   .features .card-body {
     display: flex;
     flex-direction: column;
@@ -549,6 +605,8 @@ footer {
   .features .card {
     height: 100%;
   }
+
+  /* Preço  */
   .preco .card-body {
     display: flex;
     flex-direction: column;
