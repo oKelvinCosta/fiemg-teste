@@ -8,7 +8,10 @@ https://okelvincosta.github.io/fiemg-teste/
 ```
 
 ## Design das Telas
+Landing Page:
 ![Landing Page](imgs/onepage.jpg)
+
+Modal:
 ![Modal](imgs/modal.jpg)
 ou
 ```bash
