@@ -3,9 +3,8 @@ O intuito do teste era avaliar a fidelidade com o protótipo fornecido.
 Além de adicionar funcionalidades de design resposivo e interações JS.
 
 ## Abra o site
-```bash
 https://okelvincosta.github.io/fiemg-teste/
-```
+
 
 ## Design das Telas
 Landing Page:
